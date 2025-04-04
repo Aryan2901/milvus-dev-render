@@ -1,10 +1,13 @@
 services:
-  - type: web
-    name: milvus-dev
-    env: docker
-    plan: free
-    dockerfilePath: ./Dockerfile
-    autoDeploy: true
-    envVars:
-      - key: PORT
-        value: 9091
+  milvus:
+    image: milvusdb/milvus:v2.3.0
+    container_name: milvus-standalone
+    ports:
+      - "19530:19530"
+      - "9091:9091"
+    environment:
+      - TZ=UTC
+    volumes:
+      - milvus-data:/var/lib/milvus
+volumes:
+  milvus-data:
