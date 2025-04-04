@@ -1,6 +1,6 @@
 services:
   milvus:
-    image: milvusdb/milvus:v2.3.0
+    image: milvusdb/milvus:v2.3.9
     container_name: milvus-standalone
     ports:
       - "19530:19530"
