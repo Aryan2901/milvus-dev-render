@@ -1,4 +1,4 @@
-FROM milvusdb/milvus:v2.3.0
+FROM milvusdb/milvus:v2.3.9
 
 # FROM milvusdb/milvus:v2.3.0
 
